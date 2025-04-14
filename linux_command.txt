@@ -1,0 +1,114 @@
+#####  whoami  ######
+---- show the user name
+####### man [command] ########
+-----show the manual of the command
+####### clear ########
+----- clear the terminal screen
+######## pwd ###########
+------- print current working directory
+#### ls #####
+------ list directory contents
+##### ls -l #####
+----- show the details of the file
+####### ls [folder] #######
+------- show the inside of the folder
+###### cd ########
+------ change directory
+##### cd .. ######
+------ back to previous folder
+### mkdir ###
+----create folder using make directory
+### mkdir foldername1 foldername2 ####
+---- create multiple folder
+### mkdir -p foldername/foldername1 ###
+----- create nested folder
+#### touch filename #####
+----- to create empty file use touch, if the file exists then make it empty and update the file created time
+#### rmdir foldername #####
+---- to remove a folder (folder must be empty)
+#### rmdir folder1 folder2 ####
+---- to remove multiple folder
+####### rm [filename] #########
+---- to remove file
+####### rm -v [file1 file2 file3] ##########
+---- to remove multiple file
+#### rm -ri [foldername] ######
+----- to remove the file and the folder with y/n answer
+##### open [filename] #####
+---- to open a file
+##### mv filename new_filename #####
+----- to rename a file
+##### mv file folder/ ####
+---- to pass the file into a folder where file and folder are in the same folder
+##### cp filename1 filename2 ######
+------ to copy a file1 to file2
+###### cp -r folder1 folder2 #######
+----- to copy the whole content of folder1 to folder2
+######### head [filename] #########
+----- Output the first part of the file
+###### tail [filename] ######
+----- Output the last part of the file
+##### date #####
+----- output the date time
+##### date > [filename] #####
+----- store the output of date[any command] command to the file and also it will replace the previous output
+##### date >> [filename] #####
+----- not replace the previous output
+##### cat [filename] #####
+----- show the full output file
+#### cat -n [filename] ####
+----- print the content of the file with line number
+#### less [filename] ####
+---- show the content of a file  like a pdf 
+##### echo [any text] #####
+----- show the text
+##### wc [filename] ####
+----- how many line, words and bytes in the file
+##### ls -al | wc ##### (pipe it)
+--- word count of the ls -l 
+##### sort [filename] #####
+---- sort the content of the file
+##### sort -n [filename] ####
+---sort number wise
+#### sort -nr [filename] ####
+---- sort reverse number wise
+##### sort -nu [filename] ####
+---- unique number sort
+##### cat [file1] [file2] | sort #####
+---- concatenate two files and show the output  by sorting
+##### uniq [filename] #####
+----- report or omit repeated line
+#### uniq -d [filename] ####
+----- only print the duplicate items of the file
+#### sort [filename] | uniq -c ####
+----- sort the file content and show how many numbers each
+##### sort [filename] | uniq -c | sort -n
+---- each content number wise sorting
+#### echo *.txt #####
+---- print the filename which have extension .txt
+#### echo *.??? ####
+---- print the filename which extension is exactly three character
+#### rm *.txt ####
+--- remove the empty file with extension .txt
+#### echo {a,b,c}.txt #####
+----- output a.txt b.txt c.txt
+#### touch tonmoy{.html,.css,.js} #####
+----- created tonmoy.html tonmoy.css tonmoy.js
+##### echo {1..5} #####
+---1 2 3 4 5
+##### echo day{1..3} ####
+----- day1 day2 day3 
+##### echo F* #####
+--- filename that starts with F
+##### diff [filename1] [filename2]
+---- show the difference between two file
+##### find . #####
+---- show the every file path
+##### find . -name 'filename' #####
+----- search a file by filename
+##### find . -type d #####
+----- show all the directory
+#### find . -type f #####
+----- show all the file
+##### find . -type d -iname '*E*' #####
+----- output of all the files with case insensitive E
